@@ -38,8 +38,8 @@ brew install wget --with-iri
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+#brew install ringojs
+#brew install narwhal
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
@@ -55,50 +55,103 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
+#brew install aircrack-ng
+#brew install bfg
+#brew install binutils
+#brew install binwalk
+#brew install cifer
+#brew install dex2jar
+#brew install dns2tcp
+#brew install fcrackzip
+#brew install foremost
+#brew install hashpump
+#brew install hydra
+#brew install john
+#brew install knock
+#brew install netpbm
+#brew install nmap
+#brew install pngcheck
+#brew install socat
+#brew install sqlmap
+#brew install tcpflow
+#brew install tcpreplay
+#brew install tcptrace
+#brew install ucspi-tcp # `tcpserver` etc.
+#brew install xpdf
+#brew install xz
 
 # Install other useful binaries.
-brew install ack
-brew install dark-mode
+#brew install ack
+#brew install dark-mode
 #brew install exiv2
 brew install git
-brew install git-lfs
-brew install imagemagick --with-webp
+#brew install git-lfs
+#brew install imagemagick --with-webp
 brew install lua
-brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
-brew install rename
-brew install rhino
-brew install speedtest_cli
-brew install ssh-copy-id
+#brew install lynx
+#brew install p7zip
+#brew install pigz
+#brew install pv
+#brew install rename
+#brew install rhino
+#brew install speedtest_cli
+#brew install ssh-copy-id
 brew install tree
-brew install webkit2png
-brew install zopfli
+#brew install webkit2png
+#brew install zopfli
+
+# Rook custom 
+brew install node
+brew install python
+brew install fish
+
+brew install caskroom/cask/brew-cask
+
+# Apps
+apps=(
+  alfred
+  dropbox
+  google-chrome
+  #qlcolorcode
+  #screenflick
+  #slack
+  #transmit
+  #appcleaner
+  firefox
+  #hazel
+  #qlmarkdown
+  #seil
+  #spotify
+  #vagrant
+  #arq
+  flash
+  iterm2
+  #qlprettypatch
+  #shiori
+  sublime-text3
+  virtualbox
+  atom
+  flux
+  #mailbox
+  #qlstephen
+  #sketch
+  #tower
+  vlc
+  #cloudup
+  #nvalt
+  #quicklook-json
+  skype
+  transmission
+  sourcetree
+  karabiner
+  bettertouchtool
+  dash
+)
+
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+echo "installing apps..."
+brew cask install --appdir="/Applications" ${apps[@]}
 
 # Remove outdated versions from the cellar.
 brew cleanup
