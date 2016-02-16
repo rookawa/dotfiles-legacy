@@ -112,6 +112,7 @@ brew install caskroom/cask/brew-cask
 apps=(
   alfred
   dropbox
+  dockertoolbox
   google-chrome
   #qlcolorcode
   #screenflick
@@ -147,6 +148,8 @@ apps=(
   karabiner
   bettertouchtool
   dash
+  itsycal
+  go2shell
 )
 
 # Install apps to /Applications
